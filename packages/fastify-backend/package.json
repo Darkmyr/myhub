@@ -1,0 +1,27 @@
+{
+  "name": "fastify-backend",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "darkmyr <gholmes951@gmail.com>",
+  "homepage": "https://github.com/Darkmyr/myhub#readme",
+  "license": "ISC",
+  "main": "lib/fastify-backend.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darkmyr/myhub.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/fastify-backend.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Darkmyr/myhub/issues"
+  }
+}
