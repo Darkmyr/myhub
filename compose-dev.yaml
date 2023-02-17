@@ -4,6 +4,7 @@ services:
     - sleep
     - infinity
     image: docker/dev-environments-javascript:stable-1
+    user: node
     init: true
     volumes:
     - type: bind
