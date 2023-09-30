@@ -10,4 +10,14 @@ services:
     - type: bind
       source: /var/run/docker.sock
       target: /var/run/docker.sock
+  app:
+    container_name: main-fe-dev
+    image: main-fe-dev
+    build:
+      context: ./packages/main-frontend
+      target: development
+    volumes:
+      - ./packages/main-fontend/src:/app/src
+    ports:
+      - 3000:3000
 
