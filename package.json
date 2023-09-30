@@ -13,7 +13,8 @@
     "lerna": "^6.5.1"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "bootstrap": "sh ./scripts/bootstrap-dev-env.sh"
   },
   "config": {
     "commitizen": {
