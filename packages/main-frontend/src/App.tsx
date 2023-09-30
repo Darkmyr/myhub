@@ -1,25 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from 'react'; // Must be imported for webpack to work
+
+const Header = lazy(() => import('MiniApp/Header'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Suspense fallback={<div>Loading Header...</div>}>
+        <Header />
+      </Suspense>
+    <div style={{backgroundColor: "red", display: 'flex', flexDirection: 'column', flex: 1, alignItems: 'center', justifyContent: 'center', color: "white"}}>
+      I'm from the main app
     </div>
+    </>
   );
 }
 
